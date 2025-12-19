@@ -1,0 +1,119 @@
+# OpenTiles Learning System - LLM Navigation Index
+
+> This file helps AI agents navigate the learning system documentation.
+> Load this file first to understand what context is available.
+
+## Project Structure
+
+```
+OpenTiles/
+├── learning/          ← You are here (learning system)
+│   ├── core/
+│   ├── prompts/
+│   └── ...
+└── dev/               ← Learner's code projects
+    ├── web/           ← React/Node web platform
+    └── unity/         ← Unity game project
+```
+
+**Code Review Path**: `../dev/web/` or `../dev/unity/` (relative from learning folder)
+
+## Quick Reference
+
+### For Session Teacher
+Load: core/learner-profile.md, core/current-focus.md, curriculum/current-term.md (daily brief section)
+Total: ~2-3K tokens
+
+### For Term Orchestrator
+Load: core/learner-profile.md, core/current-focus.md, curriculum/current-term.md, progress/skills-log.md
+Plus: Latest session handoff from sessions/
+Total: ~4-5K tokens
+
+### For Course Leader
+Load: core/learner-profile.md, core/current-focus.md, progress/milestones.md, progress/skills-log.md
+Plus: Last 2-3 term summaries from curriculum/term-history/
+Total: ~5-6K tokens
+
+---
+
+## File Index
+
+### Core Context (Always Load)
+| File | Tokens | Purpose | Updated By |
+|------|--------|---------|------------|
+| core/learner-profile.md | ~800 | Learner identity, goals, preferences | Course Leader (monthly) |
+| core/current-focus.md | ~400 | Active objective, blockers, session count | Term Orchestrator (weekly) |
+
+### Progress Tracking
+| File | Tokens | Purpose | Updated By |
+|------|--------|---------|------------|
+| progress/skills-log.md | ~600 | Skill levels with timestamps | Term Orchestrator (weekly) |
+| progress/milestones.md | ~600 | Phase gate checkpoints | Course Leader (monthly) |
+
+### Curriculum
+| File | Tokens | Purpose | Updated By |
+|------|--------|---------|------------|
+| curriculum/current-term.md | ~800 | Weekly plan, daily briefs | Term Orchestrator (weekly) |
+| curriculum/term-history/*.md | ~1000 each | Archived term summaries | Term Orchestrator (end of term) |
+
+### Sessions
+| File | Tokens | Purpose | Updated By |
+|------|--------|---------|------------|
+| sessions/YYYY-MM-DD.md | ~500 | Individual session handoffs | Session Teacher (per session) |
+| sessions/week-X-summary.md | ~800 | Weekly rollup | Term Orchestrator (weekly) |
+
+### Agent Prompts
+| File | Purpose |
+|------|---------|
+| prompts/course-leader.md | Monthly strategic planning instructions |
+| prompts/term-orchestrator.md | Weekly/daily coordination instructions |
+| prompts/session-teacher.md | Per-session teaching instructions |
+
+### Templates
+| File | Purpose |
+|------|---------|
+| templates/session-handoff.md | Post-session report format |
+| templates/daily-brief.md | Pre-session brief format |
+| templates/weekly-summary.md | End-of-week summary format |
+| templates/term-summary.md | End-of-term summary format |
+
+### Reference
+| File | Purpose |
+|------|---------|
+| learningsystem.md | Original system design document |
+
+### Learner Code (outside learning folder)
+| Path | Purpose |
+|------|---------|
+| ../dev/web/ | React/Node web platform code |
+| ../dev/unity/ | Unity/C# game code |
+
+---
+
+## Token Budget Guidelines
+
+| Context Tier | Budget | Contents |
+|--------------|--------|----------|
+| Core (always) | 1-2K | learner-profile + current-focus |
+| Working | 4-8K | Core + current-term + skills-log + recent session |
+| Full review | 8-12K | Working + milestones + multiple term summaries |
+
+**Warning**: Keep total context under 15K tokens to avoid "lost in the middle" effect.
+
+---
+
+## Update Cadence
+
+| Agent | Frequency | Updates |
+|-------|-----------|---------|
+| Session Teacher | Per session | sessions/YYYY-MM-DD.md |
+| Term Orchestrator | Weekly | curriculum/current-term.md, progress/skills-log.md, core/current-focus.md |
+| Course Leader | Monthly | core/learner-profile.md, progress/milestones.md, curriculum/term-history/ |
+
+---
+
+## Archive Policy
+
+- Sessions older than 30 days: Compress to single-paragraph summary
+- Sessions older than 90 days: Compress to single-line entry in archive
+- Term summaries: Keep full versions in term-history/
