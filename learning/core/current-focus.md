@@ -1,30 +1,44 @@
 ---
 type: current-focus
 last_updated: 2025-12-19
+updated_by: term-orchestrator
 token_budget: 400
 ---
 
 # Current Focus
 
 ## Status
-**Awaiting Course Leader initialization**
+**Phase 1, Term 1, Week 1 — Active**
 
 ## Active Objective
-- [ ] Complete system setup
-- [ ] Run first Course Leader session to generate Phase 1 curriculum
+- [x] Complete system setup
+- [x] Run first Course Leader session
+- [x] Run Term Orchestrator to generate Week 1 plan
+- [ ] Begin HTML Foundations (Week 1)
 
 ## Current Module
-- **Phase**: Pre-Phase 1
-- **Module**: System Setup
-- **Sessions in module**: 0
+- **Phase**: 1 (Foundations)
+- **Term**: 1
+- **Week**: 1 of 4 (Dec 19-25)
+- **Focus**: HTML Document Structure
+
+## This Week's Goal
+Build a complete HTML page from scratch by weekend, understand every tag used.
+
+## Immediate Next Actions
+1. Start Session 1 with Session Teacher (today, Dec 19)
+2. Create first HTML file and see it render in browser
+3. Learn basic tags: `<h1>`, `<p>`
+4. Complete between-session task: `hello.html` with name and bio
 
 ## Blockers
 None currently.
 
-## Next Actions
-1. Review learning system structure
-2. Start Course Leader conversation in Claude Desktop
-3. Generate first term curriculum (Phase 1, Week 1)
+## Milestone Targets (Term 1)
+- M1.1: Build a static webpage from scratch without reference
+- M1.2: Create a responsive layout using Flexbox
+- M1.3: Build a multi-page site with navigation
+- M1.7: Create a Git repo, make commits, push to GitHub
 
 ## Session Counter
 - **Total sessions**: 0

@@ -11,7 +11,7 @@ token_budget: 800
 ## Identity
 - **Name**: Jake Mitchell
 - **Start Date**: 2025-12-19
-- **Current Phase**: Pre-Phase 1 (System Setup)
+- **Current Phase**: Phase 1 (Foundations) — Term 1, Week 1
 
 ## Experience Level
 - **Programming**: Complete beginner
@@ -47,17 +47,26 @@ Build **OpenTiles**—a Piano Tiles clone with:
 - Must avoid tutorial hell and AI dependency
 
 ## Learning Preferences
-<!-- Updated by Course Leader as patterns emerge -->
-- **Preferred session length**: [TBD]
-- **Best learning time**: [TBD]
-- **Preferred explanation style**: [TBD]
-- **Response to struggle**: [TBD]
+- **Preferred session length**: Variable (45 min - 5+ hours depending on focus state)
+- **Schedule**: ~2 hours daily, one midweek break day, longer weekend sessions
+- **Weekly capacity**: 14-18 hours (exceeds minimum target)
+- **ADHD considerations**:
+  - Needs variety within sessions
+  - Benefits from early visual wins
+  - Hyperfocus potential is an asset when channeled
+  - Clear stopping points essential for easy re-entry
+- **Preferred explanation style**: [TBD - observe in sessions]
+- **Response to struggle**: [TBD - observe in sessions]
+
+## Core Motivation
+Frustrated by ad-filled free games on Android. Wants to build a Piano Tiles clone where users can create and import custom track files to play different songs. The user-generated content/sharing aspect is the emotional core of the project — connects to Phase 4-5 backend work.
 
 ## Anti-Patterns to Watch
 - Over-reliance on AI for solutions
 - Passive tutorial consumption without building
 - Skipping JavaScript fundamentals for React
 - Avoiding error messages/debugging
+- **Routine dropout**: Primary risk factor. Consistency is the challenge, not comprehension. System must provide external structure and connect fundamentals to OpenTiles vision frequently.
 
 ## North Star
 > Build OpenTiles from scratch, understanding every line of code written.
