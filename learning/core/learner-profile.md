@@ -17,7 +17,7 @@ token_budget: 800
 - **Programming**: Complete beginner
 - **Web Development**: None
 - **Game Development**: None
-- **Technical Background**: [To be filled in]
+- **Technical Background**: Software support, 9 years customer service, never past first line level.
 
 ## Goals
 
